@@ -1,0 +1,29 @@
+{
+  "name": "enofferingsserver",
+  "version": "1.0.0",
+  "description": "this application will be used to fetch the data related to enofferings ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "RestAPI",
+    "MongoDB",
+    "Mongoose",
+    "Notes"
+  ],
+  "author": "Madha Dhanasekar",
+  "license": "MIT",
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-basic-auth": "^1.1.6",
+    "json": "^9.0.6",
+    "mongoose": "^5.4.22",
+    "node-linq": "0.0.5",
+    "request": "^2.88.0"
+  }
+}

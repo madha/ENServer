@@ -96,5 +96,12 @@ module.exports = (app) => {
     app.post("/getDeviceInfoById",Dnac.getDeviceDetailsById);
     app.post("/getLinkinformation",Dnac.getLinkInformation);
     app.post("/getSiteFilter",Dnac.getSiteFilter);
+    app.post("/getdevicebytype",Dnac.getInforByType);
+    app.post("/getEdgeLinkinfo",Dnac.getLinkInformationbylinkId);
+    app.post("/getDevicelist",Dnac.getDeviceList);
+    app.post("/getDeviceConfig",Dnac.getDeviceConfigByDeviceId);
+    app.post("/getNetworkHealth",Dnac.getNetworkHealth);
+    app.post("/getClientHealth",Dnac.getClientHealth);
+    app.post("/complaince",Dnac.complaincecount);
   
 }

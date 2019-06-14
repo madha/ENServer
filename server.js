@@ -14,6 +14,8 @@ mongoose.connect(dbConfig.url, {
     console.log('Could not connect to the database. Exiting now...', err);
     process.exit();
 });
+const PORT = 3001;
+const HOST = '0.0.0.0';
 const app = express();
 app.use(cors());
 app.options('*', cors());
@@ -36,6 +38,5 @@ app.get('/', (req, res) => {
 
 require('./app/routes/routes.js')(app);
 // listen for requests
-app.listen(3001, () => {
-    console.log("Server is listening on port 3001");
-});
+app.listen(PORT,HOST)
+console.log('Running on http://'+HOST+ ':'+PORT);

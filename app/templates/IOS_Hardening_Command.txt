@@ -1,0 +1,63 @@
+service password-encryption
+enable secret 0 <password>
+
+username <name> secret <password>
+no service password-recovery
+
+hostname <device_hostname>
+domain-name <domain-name>
+crypto key generate rsa modulus 2048
+
+ip ssh timeout 60
+ip ssh authentication-retries 3
+
+line console 0
+transport input ssh
+exit
+line vty 0 4
+transport input ssh
+exit
+line vty 5 15
+transport input ssh
+exit
+
+line vty 0 4
+exec-timeout 5 0
+exit
+line vty 5 15
+exec-timeout 5 0
+exit
+
+no ip domain-lookup
+no cdp run
+no service dhcp
+no ip bootp server
+no ip http server
+service tcp-keepalives-in
+service tcp-keepalives-out
+no tftp-server
+
+logging on
+logging buffered 16000
+logging console critical
+
+service timestamps debug datetime msec show-timezone localtime
+service timestamps log datetime msec show-timezone localtime
+
+no ip source-route
+
+interface <interface-id>
+no ip directed-broadcast
+exit
+
+interface <interface-id>
+no ip proxy-arp
+exit
+
+no ip gratuitous-arps
+
+inteface <interface-id>
+switchport port-security
+switchport port-security violation shutdown
+switchport port-security maximum 1
+switchport port-security mac-address sticky

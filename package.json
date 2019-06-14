@@ -19,11 +19,15 @@
     "basic-auth": "^2.0.1",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
+    "deep-diff": "^1.0.2",
     "express": "^4.16.4",
     "express-basic-auth": "^1.1.6",
     "json": "^9.0.6",
+    "line-by-line": "^0.1.6",
+    "line-reader": "^0.4.0",
     "mongoose": "^5.4.22",
     "node-linq": "0.0.5",
+    "prettysize": "^2.0.0",
     "request": "^2.88.0"
   }
 }
